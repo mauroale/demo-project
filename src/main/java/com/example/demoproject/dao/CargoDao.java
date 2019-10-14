@@ -3,7 +3,7 @@ package com.example.demoproject.dao;
 import java.util.List;
 
 import com.example.demoproject.domain.Cargo;
-import com.example.demoproject.domain.Departamento;
+
 
 public interface CargoDao {
 	
