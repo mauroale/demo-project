@@ -1,4 +1,4 @@
-package com.exemple.demoproject.service;
+package com.example.demoproject.service;
 
 import java.util.List;
 
@@ -45,6 +45,15 @@ public class CargoServiceImpl implements CargoService {
 	public List<Cargo> buscarTodos() {
 		
 		return dao.findAll( );
+	}
+
+	@Override
+	public boolean cargoTemFuncionarios(Long id) {
+		
+		if( buscarPorId(id).getFuncionarios().isEmpty() ) {
+			return false;
+		}
+		return true;
 	}
 	
 	

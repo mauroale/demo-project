@@ -1,4 +1,4 @@
-package com.exemple.demoproject.service;
+package com.example.demoproject.service;
 
 import java.util.List;
 
@@ -51,6 +51,16 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 	@Override
 	public List<Departamento> buscarTodos() {
 		return dao.findAll();
+	}
+
+
+	@Override
+	public boolean departamentoTemCargos(Long id) {
+		
+		if(buscarPorId(id).getCargos().isEmpty()) {
+			return false;
+		}
+		return true;
 	}
 
 }

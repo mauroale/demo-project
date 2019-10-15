@@ -1,4 +1,4 @@
-package com.exemple.demoproject.service;
+package com.example.demoproject.service;
 
 import java.util.List;
 
@@ -15,6 +15,8 @@ public interface CargoService {
 	Cargo buscarPorId (Long id);
 	
 	List<Cargo> buscarTodos ();
+
+	boolean cargoTemFuncionarios(Long id);
 	
 	
 }
